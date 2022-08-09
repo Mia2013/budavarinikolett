@@ -1,10 +1,9 @@
 import Box from "@mui/material/Box";
 
-
-export default function Home(){
+export default function Contact(){
     return(
-        <>Home
-                 <Box sx={{ my: 10 }}>
+        <>Contact
+                         <Box sx={{ my: 10 }}>
               {[...new Array(15)]
                 .map(
                   () => `Cras mattis consectetur purus sit amet fermentum.
@@ -13,7 +12,6 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                 )
                 .join("\n")}
-            </Box>
-        </>
+            </Box></>
     )
 }

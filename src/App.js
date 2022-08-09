@@ -1,35 +1,51 @@
-import * as React from "react";
+import React, { useEffect, Suspense } from "react";
 import Toolbar from "@mui/material/Toolbar";
 import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-
-import BackToTop from "./components/BackToTop";
-import ResponsiveAppBar from "./components/Nav"
-
 import "./App.scss";
 
+import BackToTop from "./components/BackToTopButton";
+import ResponsiveAppBar from "./components/Nav/Nav";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Loading from "./components/Loading";
+
+import { pages } from "./components/pages"
+
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 2000,
+      useClassNames: false,
+      throttleDelay: 99,
+      once: true,
+      anchorPlacement: "top-bottom",
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="App">
       <React.Fragment>
         <CssBaseline />
-        <ResponsiveAppBar />
-        <Toolbar id="back-to-top-anchor" />
-        <Container>
-          <Box sx={{ my: 10 }}>
-            {[...new Array(15)]
-              .map(
-                () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-              )
-              .join("\n")}
-          </Box>
-        </Container>
+        <ResponsiveAppBar pages ={pages}/>
+        <Suspense fallback={<Loading />}>
+          <Toolbar id="back-to-top-anchor" />
+          <Container  sx={{ my: 10 }}>
+   
+            {pages.map((item)=> (
+             
+                 <section id={item.path} key={item.href}>
+                {item.component}
+               </section>
+            ))
+}
+          </Container>
 
-        <BackToTop />
+          <BackToTop />
+        </Suspense>
       </React.Fragment>
     </div>
   );

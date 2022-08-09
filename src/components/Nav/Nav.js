@@ -9,31 +9,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Link from "@material-ui/core/Link";
 
+
 import { pink } from "@mui/material/colors";
 
 import DrawerAppBar from "./Drawer";
 
-const pages = [
-  {
-    name: "Home",
-    path: "/",
-  },
-
-  {
-    name: "About",
-    path: "#about",
-  },
-  {
-    name: "Projects",
-    path: "#projects",
-  },
-  {
-    name: "Contact",
-    path: "#contact",
-  },
-];
-
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({ pages }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -41,10 +22,11 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="fixed" sx={{ bgcolor: "#fff" }}>
-      <Container maxWidth="xl" sx={{ mx: { xs: 3, sm: 5, md: 20 } }}>
-        <Toolbar disableGutters>
+    <AppBar position="fixed" sx={{ bgcolor: "#fff" }} width="100%">
+      <Container >
+        <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between", mx: 5}}>
           <Typography
+            data-aos="flip-up"
             className="logo"
             component="a"
             href="/"
@@ -85,6 +67,7 @@ const ResponsiveAppBar = () => {
             />
           </Box>
           <Typography
+            data-aos="fade-down"
             className="logo"
             component="a"
             href="/"
@@ -105,7 +88,7 @@ const ResponsiveAppBar = () => {
 
           <Box
             sx={{
-              flexGrow: 1,
+              
               display: { xs: "none", sm: "flex" },
               justifyContent: "center",
             }}
@@ -115,8 +98,9 @@ const ResponsiveAppBar = () => {
                 key={page.name}
                 onClick={handleDrawerToggle}
                 component={Link}
-                href={page.path}
+                href={page.href}
                 sx={{ m: 1, color: "black", display: "block" }}
+                data-aos="flip-up"
               >
                 {page.name}
               </Button>

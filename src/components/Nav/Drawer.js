@@ -17,7 +17,7 @@ function DrawerAppBar(props) {
   const { window, pages, handleDrawerToggle, mobileOpen } = props;
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }} >
       <Typography
         className="logo"
         component="a"
@@ -31,6 +31,7 @@ function DrawerAppBar(props) {
           fontFamily: "Playfair Display",
           my: 1
         }}
+        
       >
         <span>B</span>
         <span>N</span>
@@ -40,7 +41,8 @@ function DrawerAppBar(props) {
         {pages.map((item) => (
           <ListItem key={item.path} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }} component={Link}
-                href={item.path}>
+                                href={item.href}
+                                >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -60,7 +62,7 @@ function DrawerAppBar(props) {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true, 
         }}
         sx={{
           display: { xs: "block", sm: "none" },

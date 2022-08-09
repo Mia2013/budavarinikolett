@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box";
 
 
-export default function Home(){
+export default function About(){
     return(
-        <>Home
+        <>About
                  <Box sx={{ my: 10 }}>
               {[...new Array(15)]
                 .map(

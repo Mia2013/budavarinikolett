@@ -23,6 +23,7 @@ function ScrollTop(props) {
     if (anchor) {
       anchor.scrollIntoView({
         block: "center",
+        behavior: 'smooth'
       });
     }
   };
@@ -32,7 +33,7 @@ function ScrollTop(props) {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: "fixed", bottom: 16, right: 16 }}
+        sx={{ position: "fixed", bottom: 25, right: 25,  }}
       >
         {children}
       </Box>
@@ -40,11 +41,11 @@ function ScrollTop(props) {
   );
 }
 
-export default function BackToTop(props) {
+export default function BackToTopButton(props) {
   return (
     <React.Fragment>
-      <ScrollTop {...props}>
-        <Fab size="small" aria-label="scroll back to top" sx={{bgcolor:pink['A200']}}>
+      <ScrollTop {...props} >
+        <Fab size="small" aria-label="scroll back to top" sx={{bgcolor:pink['A200']}} >
           <KeyboardArrowUpIcon  />
         </Fab>
       </ScrollTop>
