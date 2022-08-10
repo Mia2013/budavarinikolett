@@ -11,7 +11,7 @@ import Link from "@material-ui/core/Link";
 
 
 import { pink } from "@mui/material/colors";
-
+import ScrollToColor from "./ScrollToColor";
 import DrawerAppBar from "./Drawer";
 
 const ResponsiveAppBar = ({ pages }) => {
@@ -23,7 +23,8 @@ const ResponsiveAppBar = ({ pages }) => {
   };
 
   return (
-    <AppBar position="fixed" sx={{ bgcolor: "#fff" }} width="100%">
+<ScrollToColor>
+    <AppBar position="fixed"  width="100%" elevation={0}>
       <Container >
         <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between"}}>
           <Typography
@@ -110,6 +111,7 @@ const ResponsiveAppBar = ({ pages }) => {
         </Toolbar>
       </Container>
     </AppBar>
+    </ScrollToColor>
   );
 };
 export default ResponsiveAppBar;
