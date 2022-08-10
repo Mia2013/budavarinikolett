@@ -28,7 +28,7 @@ function DrawerAppBar(props) {
           textDecoration: "none",
           color: pink["A200"],
           fontSize: "1.5rem",
-          fontFamily: "Playfair Display",
+          fontFamily: "Playfair Display SC",
           my: 1
         }}
         

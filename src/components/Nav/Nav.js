@@ -16,6 +16,7 @@ import DrawerAppBar from "./Drawer";
 
 const ResponsiveAppBar = ({ pages }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -24,7 +25,7 @@ const ResponsiveAppBar = ({ pages }) => {
   return (
     <AppBar position="fixed" sx={{ bgcolor: "#fff" }} width="100%">
       <Container >
-        <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between", mx: 5}}>
+        <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between"}}>
           <Typography
             data-aos="flip-up"
             className="logo"
@@ -36,7 +37,7 @@ const ResponsiveAppBar = ({ pages }) => {
               textDecoration: "none",
               color: pink["A200"],
               fontSize: { sm: "1.5rem", md: "2.5rem" },
-              fontFamily: "Playfair Display",
+              fontFamily: "Playfair Display SC",
             }}
           >
             <span>B</span>
@@ -78,7 +79,7 @@ const ResponsiveAppBar = ({ pages }) => {
               textDecoration: "none",
               color: pink["A200"],
               fontSize: "1.5rem",
-              fontFamily: "Playfair Display",
+              fontFamily: "Playfair Display SC",
               my: 1,
             }}
           >
