@@ -6,16 +6,17 @@ import { yellow } from "@mui/material/colors";
 export default function Home() {
   return (
     <Grid container sx={{ my: 10 }}>
-      <Grid item container xs={12} sm={6} sx={{ my: 5 }}>
+      <Grid item container xs={12} sm={6} sx={{ my: 5, textAlign: {xs: "center", sm: "left"} }} data-aos="fade-left">
         <Grid
           item
           xs={12}
-          sx={{ display: "flex", alignItems: "flex-end", mb: 3 }}
+          sx={{ display: "flex", alignItems: "flex-end", justifyContent: {xs: "center", sm: "flex-start" }, mb: {xs: 0, sm: 3} }}
         >
           <Typography
             variant="h3"
             color="white"
             sx={{ bgcolor: yellow[600], px: 3, py: 0.5, borderRadius: "6px" }}
+    
           >
             Hello
           </Typography>
@@ -28,11 +29,11 @@ export default function Home() {
           <Typography
             variant="h1"
             sx={{
-              mb: { xs: 2, sm: 0 },
+              my: { xs: 3, sm: "auto" },
               alignItems: "flex-end",
               fontFamily: "Playfair Display SC",
               fontWeight: "bolder",
-              fontSize: { xs: "4rem", sm: "auto" },
+              fontSize: { xs: "4rem", sm: "6rem" },
             }}
           >
             Nikolett
@@ -44,7 +45,7 @@ export default function Home() {
             sx={{
               fontWeight: "bolder",
               alignItems: "flex-end",
-              fontSize: { xs: "3rem", sm: "auto" },
+              fontSize: { xs: "3rem", sm: "3.75rem" },
             }}
           >
             Web <span>Developer</span>
@@ -62,7 +63,7 @@ export default function Home() {
           <Typography
             component="img"
             sx={{
-              width: { xs: "50%", md: "100%" },
+              width: { xs: "50%", md: "70%" },
               filter: "drop-shadow(10px 0px 8px rgba(0,0,0,.415))",
             }}
             src={`${process.env.PUBLIC_URL}/me.png`}

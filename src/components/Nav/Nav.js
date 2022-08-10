@@ -28,7 +28,6 @@ const ResponsiveAppBar = ({ pages }) => {
       <Container >
         <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between"}}>
           <Typography
-            data-aos="flip-up"
             className="logo"
             component="a"
             href="/"
@@ -69,7 +68,6 @@ const ResponsiveAppBar = ({ pages }) => {
             />
           </Box>
           <Typography
-            data-aos="fade-down"
             className="logo"
             component="a"
             href="/"
@@ -102,7 +100,6 @@ const ResponsiveAppBar = ({ pages }) => {
                 component={Link}
                 href={page.href}
                 sx={{ m: 1, color: "black", display: "block" }}
-                data-aos="flip-up"
               >
                 {page.name}
               </Button>
