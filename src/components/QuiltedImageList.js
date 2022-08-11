@@ -16,6 +16,7 @@ export default function QuiltedImageList({images}) {
     <ImageList
       variant="quilted"
       cols={6}
+      data-aos="flip-up"
     >
       {images.map((item) => (
         <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
@@ -23,6 +24,7 @@ export default function QuiltedImageList({images}) {
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
             loading="lazy"
+            
           />
         </ImageListItem>
       ))}

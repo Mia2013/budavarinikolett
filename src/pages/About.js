@@ -34,7 +34,7 @@ export default function About() {
       <Grid item xs={12}>
         <PageTitle title="About" />
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} data-aos="fade-up">
         <Typography variant="body1" sx={{ lineHeight: "2.5rem", mb: 3 }}>
           {" "}
           I finished a JavaScript heavy bootcamp with Green Fox and learned to

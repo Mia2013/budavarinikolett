@@ -1,5 +1,14 @@
 import * as React from "react";
-import { Box, Button, Divider,Drawer, List, ListItem, ListItemButton, Typography }  from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  Typography,
+} from "@mui/material";
 import Link from "@material-ui/core/Link";
 import { pink } from "@mui/material/colors";
 
@@ -30,24 +39,23 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {pages.map((page) => (
-          <ListItem key={page.path} disablePadding>
+          <ListItem key={`${page.name}drawer`} disablePadding>
             <ListItemButton>
-            <Button
-                  key={page.name}
-                  onClick={handleDrawerToggle}
-                  sx={{
-                    my: 1,
-                    mx: "auto",
-                    color: "black",
-                    display: "block",
-                    fontFamily: "Playfair Display SC",
-                    fontSize: "1rem"
-                  }}
-                  component={Link}
-                  href={page.href}
-                >
-                  {page.name}
-                </Button>
+              <Button
+                onClick={handleDrawerToggle}
+                sx={{
+                  my: 1,
+                  mx: "auto",
+                  color: "black",
+                  display: "block",
+                  fontFamily: "Playfair Display SC",
+                  fontSize: "1rem",
+                }}
+                component={Link}
+                href={page.href}
+              >
+                {page.name}
+              </Button>
             </ListItemButton>
           </ListItem>
         ))}

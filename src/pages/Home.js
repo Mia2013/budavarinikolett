@@ -5,11 +5,11 @@ import { yellow } from "@mui/material/colors";
 export default function Home() {
   return (
     <Grid container sx={{ my: 10 }}>
-      <Grid item container xs={12} sm={6} sx={{ my: 5, textAlign: {xs: "center", sm: "left"} }} data-aos="fade-left">
+      <Grid item container xs={12} md={6} sx={{ my: 5, textAlign: {xs: "center", md: "left"} }} data-aos="fade-left">
         <Grid
           item
           xs={12}
-          sx={{ display: "flex", alignItems: "flex-end", justifyContent: {xs: "center", sm: "flex-start" }, mb: {xs: 0, sm: 3} }}
+          sx={{ display: "flex", alignItems: "flex-end", justifyContent: {xs: "center", md: "flex-start" }, mb: {xs: 0, md: 3} }}
         >
           <Typography
             variant="h3"
@@ -28,11 +28,11 @@ export default function Home() {
           <Typography
             variant="h1"
             sx={{
-              my: { xs: 3, sm: "auto" },
+              my: { xs: 3, md: "auto" },
               alignItems: "flex-end",
               fontFamily: "Playfair Display SC",
               fontWeight: "bolder",
-              fontSize: { xs: "4rem", sm: "6rem" },
+              fontSize: { xs: "4rem", md: "6rem" },
             }}
           >
             Nikolett
@@ -44,20 +44,19 @@ export default function Home() {
             sx={{
               fontWeight: "bolder",
               alignItems: "flex-end",
-              fontSize: { xs: "3rem", sm: "3.75rem" },
+              fontSize: { xs: "3rem", md: "3.75rem" },
             }}
             className="web-developer-title"
           >
             Web <span>Developer</span>
           </Typography>
         </Grid>
-        <Grid item xs={6}></Grid>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} md={6}>
         <Box
           sx={{
             display: "flex",
-            justifyContent: { xs: "center", sm: "flex-end" },
+            justifyContent: { xs: "center", md: "flex-end" },
           }}
         >
           <Typography

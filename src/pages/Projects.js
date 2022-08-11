@@ -9,7 +9,7 @@ export default function Projects() {
       <Grid item xs={12}>
         <PageTitle title="Projects" />
       </Grid>
-      <Grid item xs={12} sx={{ textAlign: "center", mb: 4 }}>
+      <Grid item xs={12} sx={{ textAlign: "center", mb: 4 }} data-aos="fade-up">
         <Typography
           color="text.primary"
           sx={{

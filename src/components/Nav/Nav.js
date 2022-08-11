@@ -102,7 +102,7 @@ const ResponsiveAppBar = ({ pages }) => {
                     color: "black",
                     display: "block",
                     fontFamily: "Playfair Display SC",
-                    fontSize: "1.3rem"
+                    fontSize: "1.1rem"
                   }}
                   component={Link}
                   href={page.href}
