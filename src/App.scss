@@ -7,7 +7,17 @@
 font-family: var(--font-family-Playfair);
 }
 
-span{
+.web-developer-title > span{
   color: #ff4081;
+
+}
+
+.title{
+ 
+  background-image: url(../public/titleBackground.png);
+  background-repeat:no-repeat;
+  background-position: center ;
+  height: 100%;
+  background-size: 160px 80px;
 }
 

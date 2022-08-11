@@ -47,6 +47,7 @@ export default function Home() {
               alignItems: "flex-end",
               fontSize: { xs: "3rem", sm: "3.75rem" },
             }}
+            className="web-developer-title"
           >
             Web <span>Developer</span>
           </Typography>
@@ -63,13 +64,16 @@ export default function Home() {
           <Typography
             component="img"
             sx={{
-              width: { xs: "50%", md: "70%" },
+              width: { xs: "30%", md: "70%" },
               filter: "drop-shadow(10px 0px 8px rgba(0,0,0,.415))",
             }}
             src={`${process.env.PUBLIC_URL}/me.png`}
           ></Typography>
         </Box>
       </Grid>
+      <h1>
+        hello
+      </h1>
     </Grid>
   );
 }

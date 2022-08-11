@@ -3,14 +3,15 @@ import {
 
   } from "@mui/material";
 
-export default function Title({title}){
+export default function PageTitle({title}){
     return(
         <Typography
         variant="h1"
         sx={{
          mb: 5,
          fontFamily: "Mrs Saint Delafield, cursive",
-         textAlign: "center"
+         textAlign: "center",
+         height: "160px"
         }}
         className="title"
       >

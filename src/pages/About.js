@@ -8,7 +8,7 @@ import {
 import CheckIcon from "@mui/icons-material/Check";
 import { lightGreen } from "@mui/material/colors";
 
-import Title from "../components/Title";
+import PageTitle from "../components/PageTitle";
 
 export default function About() {
   const skills = [
@@ -28,12 +28,12 @@ export default function About() {
     "Node.js",
   ];
   return (
-    <Grid container sx={{ my: 5, width: "85%", mx: "auto" }}>
+    <Grid container sx={{ my: 8, mx: "auto" }}>
       <Grid item xs={12}>
-        <Title title="About"/>
+        <PageTitle title="About" />
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="body1">
+        <Typography variant="body1" sx={{ lineHeight: "2.5rem", mb: 3 }}>
           {" "}
           I finished a JavaScript heavy bootcamp with Green Fox and learned to
           use modern web development technologies. I'm highly motivated, very
@@ -41,7 +41,7 @@ export default function About() {
           continue to learn and build my career.
         </Typography>
 
-        <Typography variant="body1">
+        <Typography variant="body1" sx={{ lineHeight: "2.5rem" }}>
           I find writing codes very exciting. I enjoy it when I have a complex
           problem and I need to figure out a strategy to solve it with logical
           thinking. I like the sense of accomplishment after finishing a task in
@@ -57,8 +57,8 @@ export default function About() {
           variant="h4"
           sx={{
             fontFamily: "Playfair Display SC",
-
-            my: 3,
+            mt: 5,
+            mb: 3,
           }}
         >
           Skills
@@ -67,11 +67,15 @@ export default function About() {
 
       {skills.map((item) => (
         <Grid item xs={6} sm={3} key={item}>
-          <ListItem data-aos="fade-up" sx={{ my: 1 }}>
-            <ListItemIcon >
-              <CheckIcon sx={{color: lightGreen[500] }} />
+          <ListItem sx={{ my: 1 }}>
+            <ListItemIcon sx={{ minWidth: "35px" }}>
+              <CheckIcon sx={{ color: lightGreen[500] }} />
             </ListItemIcon>
-            <ListItemText primary={item} sx={{ textTransform: "uppercase" }} />
+            <ListItemText
+              data-aos="fade-up"
+              primary={item}
+              sx={{ textTransform: "uppercase", fontWeight: "bolder" }}
+            />
           </ListItem>
         </Grid>
       ))}

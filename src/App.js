@@ -33,7 +33,7 @@ function App() {
         <ResponsiveAppBar pages ={pages}/>
         <Suspense fallback={<Loading />}>
           <Toolbar id="back-to-top-anchor" />
-          <Container  sx={{ my: 10 }}>
+          <Container  sx={{ my: 10, width: {lg: "80%"} }}>
    
             {pages.map((item)=> (
              

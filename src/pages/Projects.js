@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
-import Title from "../components/Title";
+import PageTitle from "../components/PageTitle";
 
 export default function Projects(){
     return(
         <>
-<Title title="Projects" />
+<PageTitle title="Projects" />
         </>
     )
 }
