@@ -40,6 +40,8 @@ export default function Contact() {
             color="text.primary"
             sx={{
               textDecoration: "none",
+              fontFamily: "Playfair Display SC",
+
             }}
             component="a"
             variant="h6"
@@ -79,11 +81,12 @@ export default function Contact() {
             color="text.primary"
             sx={{
               textDecoration: "none",
+              fontFamily: "Playfair Display SC",
+
             }}
             component="a"
             variant="h6"
-            href="mailto:                 komlosnikolett@gmail.com
-                "
+            href="mailto: komlosnikolett@gmail.com"
           >
             komlosnikolett@gmail.com
           </Typography>
@@ -110,7 +113,8 @@ export default function Contact() {
           >
             Location
           </Typography>
-          <Typography variant="h6">Budapest, Hungary</Typography>
+          <Typography variant="h6"  sx={{
+              fontFamily: "Playfair Display SC",}}>Budapest, Hungary</Typography>
         </Box>
       </Grid>
     </Grid>

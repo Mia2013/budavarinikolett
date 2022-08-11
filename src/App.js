@@ -9,7 +9,7 @@ import ResponsiveAppBar from "./components/Nav/Nav";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Loading from "./components/Loading";
-
+import FixedBottomNavigation from "./components/Footer";
 import { pages } from "./components/pages"
 
 
@@ -46,6 +46,7 @@ function App() {
 
           <BackToTop />
         </Suspense>
+        <FixedBottomNavigation />
       </React.Fragment>
     </div>
   );

@@ -23,7 +23,8 @@ export default function About() {
     "GitHub",
     "JEST",
     "JIRA",
-    "MongoDB",
+    "firebase",
+    "Mongo DB",
     "Express.js",
     "Node.js",
   ];
@@ -66,9 +67,9 @@ export default function About() {
       </Grid>
 
       {skills.map((item) => (
-        <Grid item xs={6} sm={3} key={item}>
-          <ListItem sx={{ my: 1 }}>
-            <ListItemIcon sx={{ minWidth: "35px" }}>
+        <Grid item xs={6} sm={3} key={item} >
+          <ListItem sx={{ my: 1, textAlign: "center"}}>
+            <ListItemIcon sx={{ minWidth: "35px", textAlign: "center" }}>
               <CheckIcon sx={{ color: lightGreen[500] }} />
             </ListItemIcon>
             <ListItemText
