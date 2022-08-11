@@ -71,9 +71,6 @@ export default function Home() {
           ></Typography>
         </Box>
       </Grid>
-      <h1>
-        hello
-      </h1>
     </Grid>
   );
 }
