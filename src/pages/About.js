@@ -4,6 +4,7 @@ import {
   ListItemIcon,
   ListItemText,
   Grid,
+  Toolbar
 } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { lightGreen } from "@mui/material/colors";
@@ -37,7 +38,7 @@ export default function About() {
         <Typography variant="body1" sx={{ lineHeight: "2.5rem", mb: 3 }}>
           {" "}
           I finished a JavaScript heavy bootcamp with Green Fox and learned to
-          use modern web development technologies. I'm highly motivated, very
+          use modern web development technologies, responsive design. I'm highly motivated, very
           passionate about programming and seeking a position where I can
           continue to learn and build my career.
         </Typography>
@@ -80,6 +81,9 @@ export default function About() {
           </ListItem>
         </Grid>
       ))}
+
+<Toolbar id="projects" />
+
     </Grid>
   );
 }

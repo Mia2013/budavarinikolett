@@ -37,9 +37,7 @@ function App() {
    
             {pages.map((item)=> (
              
-                 <section id={item.path} key={item.href}>
-                {item.component}
-               </section>
+                item.component
             ))
 }
           </Container>

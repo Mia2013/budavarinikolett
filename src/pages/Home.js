@@ -1,6 +1,5 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import {Box, Toolbar, Typography, Grid } from "@mui/material";
+
 import { yellow } from "@mui/material/colors";
 
 export default function Home() {
@@ -71,6 +70,7 @@ export default function Home() {
           ></Typography>
         </Box>
       </Grid>
+      <Toolbar id="about" />
     </Grid>
   );
 }
