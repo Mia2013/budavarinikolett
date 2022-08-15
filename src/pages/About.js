@@ -37,28 +37,18 @@ export default function About() {
       </Grid>
       <Grid item xs={12} data-aos="fade-up">
         <Typography variant="body1" sx={{ lineHeight: "2.5rem", mb: 3 }}>
-          {/* {" "}
-          I finished a JavaScript heavy bootcamp with Green Fox and learned to
-          use modern web development technologies, responsive design. I'm highly motivated, very
-          passionate about programming and seeking a position where I can
-          continue to learn and build my career. */}
-          My name's Nikolett. I finished a JavaScript heavy bootcamp with Green Fox in 2022, and learned to
-          use modern web development technologies, responsive design.  My interests are in
-          Frontend and Backend development. I love to create beautiful and performant
-          products with delightful user experiences. I'm highly motivated, very
-          passionate about programming. I'm looking for a job where I can
-          continue to learn and build my career.
+
+          My name's Nikolett. I finished a JavaScript heavy bootcamp course with Green
+          Fox in 2022, and learned to use modern web development technologies,
+          responsive design. I am interested in both Frontend and Backend
+          development. I find writing codes very exciting, and I love to create
+          beautiful and performant products with delightful user experiences. I
+          can use my creativity during my work is also very important for me.
+          I'm highly motivated, very passionate about programming. I'm looking
+          for a job where I can continue to learn and build my career.
         </Typography>
 
-        <Typography variant="body1" sx={{ lineHeight: "2.5rem" }}>
-          {/* I find writing codes very exciting. I enjoy it when I have a complex
-          problem and I need to figure out a strategy to solve it with logical
-          thinking. I like the sense of accomplishment after finishing a task in
-          time or fixing a bug or just seeing that all of the tests are passing.
-          Programming offers great career opportunities with various paths and
-          continuous learning. Knowing that I am progressing and I can use my
-          creativity during my work is also very important for me. */}
-        </Typography>
+      
       </Grid>
 
       <Grid item xs={12}>
