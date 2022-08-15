@@ -1,21 +1,33 @@
-import {Box, Toolbar, Typography, Grid } from "@mui/material";
+import { Box, Toolbar, Typography, Grid } from "@mui/material";
 
 import { yellow } from "@mui/material/colors";
 
 export default function Home() {
   return (
     <Grid container sx={{ my: 10 }}>
-      <Grid item container xs={12} md={6} sx={{ my: 5, textAlign: {xs: "center", md: "left"} }} data-aos="fade-left">
+      <Grid
+        item
+        container
+        xs={12}
+        md={6}
+        sx={{ textAlign: { xs: "center", md: "left" } }}
+        data-aos="fade-left"
+      >
         <Grid
           item
           xs={12}
-          sx={{ display: "flex", alignItems: "flex-end", justifyContent: {xs: "center", md: "flex-start" }, mb: {xs: 0, md: 3} }}
+          sx={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: { xs: "center", md: "flex-start" },
+            mb: 0,
+          }}
         >
           <Typography
             variant="h3"
             color="white"
             sx={{ bgcolor: yellow[600], px: 3, py: 0.5, borderRadius: "6px" }}
-    
+            className="home"
           >
             Hello
           </Typography>
@@ -24,11 +36,21 @@ export default function Home() {
             I'm
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          sx={{
+            my: { xs: 3, md: "auto" },
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-start" },
+
+            alignItems: "center"
+
+          }}
+        >
           <Typography
             variant="h1"
             sx={{
-              my: { xs: 3, md: "auto" },
               alignItems: "flex-end",
               fontFamily: "Playfair Display SC",
               fontWeight: "bolder",
@@ -38,12 +60,22 @@ export default function Home() {
             Nikolett
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          sx={{
+            my: { xs: 3, md: 0 },
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-start" },
+
+            alignItems: "flex-start"
+          }}
+        >
+          {" "}
           <Typography
             variant="h2"
             sx={{
               fontWeight: "bolder",
-              alignItems: "flex-end",
               fontSize: { xs: "3rem", md: "3.75rem" },
             }}
             className="web-developer-title"

@@ -11,7 +11,8 @@ export default function PageTitle({title, id}){
          my: 5,
          fontFamily: "Mrs Saint Delafield, cursive",
          textAlign: "center",
-         height: "160px"
+         height: "160px",
+       
         }}
         className="title"
         id={id}

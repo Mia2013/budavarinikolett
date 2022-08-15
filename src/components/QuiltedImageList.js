@@ -17,6 +17,7 @@ export default function QuiltedImageList({images}) {
       variant="quilted"
       cols={6}
       data-aos="flip-up"
+      gap={10}
     >
       {images.map((item) => (
         <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
