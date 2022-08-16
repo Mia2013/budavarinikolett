@@ -1,4 +1,4 @@
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box, Toolbar } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
@@ -8,6 +8,8 @@ import PageTitle from "../components/PageTitle";
 export default function Contact() {
   return (
     <Grid container sx={{ my: 8, mx: "auto" }}>
+      <Toolbar id="contact" />
+
       <Grid item xs={12}>
         <PageTitle title="Contact" />
       </Grid>
@@ -18,7 +20,7 @@ export default function Contact() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            mt: 4
+            mt: 4,
           }}
           data-aos="flip-left"
         >
@@ -42,7 +44,6 @@ export default function Contact() {
             sx={{
               textDecoration: "none",
               fontFamily: "Playfair Display SC",
-
             }}
             component="a"
             variant="h6"
@@ -58,8 +59,7 @@ export default function Contact() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            mt: 4
-
+            mt: 4,
           }}
           data-aos="flip-left"
         >
@@ -85,7 +85,6 @@ export default function Contact() {
             sx={{
               textDecoration: "none",
               fontFamily: "Playfair Display SC",
-
             }}
             component="a"
             variant="h6"
@@ -101,8 +100,7 @@ export default function Contact() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            mt: 4
-
+            mt: 4,
           }}
           data-aos="flip-left"
         >
@@ -118,8 +116,14 @@ export default function Contact() {
           >
             Location
           </Typography>
-          <Typography variant="h6"  sx={{
-              fontFamily: "Playfair Display SC",}}>Budapest, Hungary</Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              fontFamily: "Playfair Display SC",
+            }}
+          >
+            Budapest, Hungary
+          </Typography>
         </Box>
       </Grid>
     </Grid>

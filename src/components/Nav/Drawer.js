@@ -9,7 +9,7 @@ import {
   ListItemButton,
   Typography,
 } from "@mui/material";
-import Link from "@material-ui/core/Link";
+import {Link} from "react-scroll";
 import { pink } from "@mui/material/colors";
 
 const drawerWidth = "80%";
@@ -51,10 +51,11 @@ function DrawerAppBar(props) {
                   fontFamily: "Playfair Display SC",
                   fontSize: "1rem",
                 }}
-                component={Link}
-                href={page.href}
+          
               >
-                {page.name}
+                    <Link activeClass="active" to={page.to} spy={true} smooth={true} offset={-50} duration={500} >
+                  {page.name}
+</Link>     
               </Button>
             </ListItemButton>
           </ListItem>

@@ -10,25 +10,25 @@ const Contact = React.lazy(() => import("../pages/Contact"));
 export const pages = [
     {
       name: "Home",
-      href: "/",
+      to: "back-to-top-anchor",
       component: <Home />
     },
   
     {
       name: "About",
-      href: "#about",
+      to: "about",
       component: <About />
 
     },
     {
       name: "Projects",
-      href: "#projects",
+      to: "projects",
       component: <Projects />
 
     },
     {
       name: "Contact",
-      href: "#contact",
+      to: "contact",
       component: <Contact />
 
     },

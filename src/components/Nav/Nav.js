@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import Link from "@material-ui/core/Link";
+import { Link } from "react-scroll";
 
 import { pink } from "@mui/material/colors";
 import ScrollToColor from "./ScrollToColor";
@@ -102,13 +102,20 @@ const ResponsiveAppBar = ({ pages }) => {
                     color: "black",
                     display: "block",
                     fontFamily: "Playfair Display SC",
-                    fontSize: "1.1rem"
+                    fontSize: "1.1rem",
                   }}
-                  component={Link}
-                  href={page.href}
                 >
-                  {page.name}
-                </Button>
+                  <Link
+                    activeClass="active"
+                    to={page.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                  >
+                    {page.name}
+                  </Link>
+                 </Button>
               ))}
             </Box>
           </Toolbar>

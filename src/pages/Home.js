@@ -1,10 +1,11 @@
-import { Box, Toolbar, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 
 import { yellow } from "@mui/material/colors";
 
 export default function Home() {
   return (
     <Grid container sx={{ my: 10 }}>
+    
       <Grid
         item
         container
@@ -44,8 +45,7 @@ export default function Home() {
             display: "flex",
             justifyContent: { xs: "center", md: "flex-start" },
 
-            alignItems: "center"
-
+            alignItems: "center",
           }}
         >
           <Typography
@@ -68,7 +68,7 @@ export default function Home() {
             display: "flex",
             justifyContent: { xs: "center", md: "flex-start" },
 
-            alignItems: "flex-start"
+            alignItems: "flex-start",
           }}
         >
           {" "}
@@ -101,7 +101,6 @@ export default function Home() {
           ></Typography>
         </Box>
       </Grid>
-      <Toolbar id="about" />
     </Grid>
   );
 }

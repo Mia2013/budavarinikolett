@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --font-family-Playfair: 'Playfair Display', serif;  
+  --color: #ff4081;
 }
 
 .logo{
@@ -8,7 +9,7 @@ font-family: var(--font-family-Playfair);
 }
 
 .web-developer-title > span{
-  color: #ff4081;
+  color: var(--color);
 
 }
 
@@ -27,4 +28,9 @@ font-family: var(--font-family-Playfair);
   border-radius: 3px;
   color: #ffc107
 
+}
+
+.active{
+  padding-bottom: 5px;
+  border-bottom: 3px solid  var(--color);
 }

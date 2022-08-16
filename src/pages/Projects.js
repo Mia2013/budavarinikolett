@@ -6,6 +6,8 @@ import { szilviSutivilagaImages } from "../components/projectImagesList";
 export default function Projects() {
   return (
     <Grid container sx={{ my: 8, mx: "auto" }}>
+            <Toolbar id="projects" />
+
       <Grid item xs={12}>
         <PageTitle title="Projects" />
       </Grid>
@@ -27,7 +29,6 @@ export default function Projects() {
       <Grid item xs={12}>
         <QuiltedImageList images={szilviSutivilagaImages} />
       </Grid>
-      <Toolbar id="contact" />
     </Grid>
   );
 }
