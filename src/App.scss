@@ -22,6 +22,14 @@ font-family: var(--font-family-Playfair);
   background-size: 160px 80px;
 }
 
+// .logo{
+ 
+//   background-image: url(../public/titleBackground.png);
+//   background-repeat:no-repeat;
+//   background-position: center ;
+//   background-size: 60px 40px;
+// }
+
 .footer-linkedin > span{
   background-color: black;
   padding: 2px 7px;
@@ -30,7 +38,3 @@ font-family: var(--font-family-Playfair);
 
 }
 
-.active{
-  padding-bottom: 5px;
-  border-bottom: 3px solid  var(--color);
-}

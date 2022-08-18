@@ -9,8 +9,7 @@ import {
   ListItemButton,
   Typography,
 } from "@mui/material";
-import {Link} from "react-scroll";
-import { pink } from "@mui/material/colors";
+import { Link } from "react-scroll";
 
 const drawerWidth = "80%";
 
@@ -26,15 +25,18 @@ function DrawerAppBar(props) {
         sx={{
           display: "flex",
           flexDirection: "column",
-          textDecoration: "none",
-          color: pink["A200"],
-          fontSize: "1.5rem",
-          fontFamily: "Playfair Display SC",
+          alignItems: "center",
           my: 1,
         }}
       >
-        <span>B</span>
-        <span>N</span>
+        <Typography
+          component="img"
+          className="logo"
+          sx={{
+            width: "30%",
+          }}
+          src={`${process.env.PUBLIC_URL}/logo.png`}
+        ></Typography>
       </Typography>
       <Divider />
       <List>
@@ -42,7 +44,6 @@ function DrawerAppBar(props) {
           <ListItem key={`${page.name}drawer`} disablePadding>
             <ListItemButton>
               <Button
-                onClick={handleDrawerToggle}
                 sx={{
                   my: 1,
                   mx: "auto",
@@ -51,11 +52,18 @@ function DrawerAppBar(props) {
                   fontFamily: "Playfair Display SC",
                   fontSize: "1rem",
                 }}
-          
               >
-                    <Link activeClass="active" to={page.to} spy={true} smooth={true} offset={-50} duration={500} >
+                <Link
+                  onClick={handleDrawerToggle}
+                  activeClass="active"
+                  to={page.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                >
                   {page.name}
-</Link>     
+                </Link>
               </Button>
             </ListItemButton>
           </ListItem>

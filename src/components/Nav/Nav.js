@@ -1,15 +1,15 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Container,
+  Button,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
-
-import { pink } from "@mui/material/colors";
 import ScrollToColor from "./ScrollToColor";
 import DrawerAppBar from "./Drawer";
 
@@ -35,14 +35,18 @@ const ResponsiveAppBar = ({ pages }) => {
               sx={{
                 display: { xs: "none", sm: "flex" },
                 flexDirection: { xs: "none", sm: "column" },
-                textDecoration: "none",
-                color: pink["A200"],
-                fontSize: { sm: "1.5rem", md: "2.5rem" },
-                fontFamily: "Playfair Display SC",
               }}
             >
-              <span>B</span>
-              <span>N</span>
+              <Typography
+                component="img"
+                className="logo"
+
+                sx={{
+                  mt: 1,
+                  width: { sm: "100px", md: "160px" },
+                }}
+                src={`${process.env.PUBLIC_URL}/logo.png`}
+              ></Typography>
             </Typography>
 
             <Box
@@ -76,15 +80,18 @@ const ResponsiveAppBar = ({ pages }) => {
                 display: { xs: "flex", sm: "none" },
                 flexGrow: 1,
                 flexDirection: { xs: "column", sm: "none" },
-                textDecoration: "none",
-                color: pink["A200"],
-                fontSize: "1.5rem",
-                fontFamily: "Playfair Display SC",
                 my: 1,
+                alignItems: "center",
               }}
             >
-              <span>B</span>
-              <span>N</span>
+              <Typography
+                component="img"
+                className="logo"
+                sx={{
+                  width: "30%",
+                }}
+                src={`${process.env.PUBLIC_URL}/logo.png`}
+              ></Typography>
             </Typography>
 
             <Box
@@ -115,7 +122,7 @@ const ResponsiveAppBar = ({ pages }) => {
                   >
                     {page.name}
                   </Link>
-                 </Button>
+                </Button>
               ))}
             </Box>
           </Toolbar>
