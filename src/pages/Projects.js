@@ -5,7 +5,7 @@ import { szilviSutivilagaImages } from "../components/projectImagesList";
 
 export default function Projects() {
   return (
-    <Grid container sx={{ my: 8, mx: "auto" }}>
+    <Grid container sx={{  my: {xs: 3, md: 8}, mx: "auto" }}>
             <Toolbar id="projects" />
 
       <Grid item xs={12}>

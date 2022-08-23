@@ -40,7 +40,6 @@ const ResponsiveAppBar = ({ pages }) => {
               <Typography
                 component="img"
                 className="logo"
-
                 sx={{
                   mt: 1,
                   width: { sm: "100px", md: "160px" },
@@ -54,6 +53,7 @@ const ResponsiveAppBar = ({ pages }) => {
                 flexGrow: 1,
                 display: { xs: "flex", sm: "none" },
                 color: "black",
+                my: 1,
               }}
             >
               <IconButton
@@ -72,7 +72,7 @@ const ResponsiveAppBar = ({ pages }) => {
                 mobileOpen={mobileOpen}
               />
             </Box>
-            <Typography
+            {/* <Typography
               className="logo"
               component="a"
               href="/"
@@ -92,7 +92,7 @@ const ResponsiveAppBar = ({ pages }) => {
                 }}
                 src={`${process.env.PUBLIC_URL}/logo.png`}
               ></Typography>
-            </Typography>
+            </Typography> */}
 
             <Box
               sx={{
@@ -101,28 +101,28 @@ const ResponsiveAppBar = ({ pages }) => {
               }}
             >
               {pages.map((page) => (
-                <Button
-                  key={page.name}
-                  onClick={handleDrawerToggle}
-                  sx={{
-                    m: 1,
-                    color: "black",
-                    display: "block",
-                    fontFamily: "Playfair Display SC",
-                    fontSize: "1.1rem",
-                  }}
+                <Link
+                  activeClass="active"
+                  to={page.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
                 >
-                  <Link
-                    activeClass="active"
-                    to={page.to}
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={500}
+                  <Button
+                    key={page.name}
+                    onClick={handleDrawerToggle}
+                    sx={{
+                      m: 1,
+                      color: "black",
+                      display: "block",
+                      fontFamily: "Playfair Display SC",
+                      fontSize: "1.1rem",
+                    }}
                   >
                     {page.name}
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               ))}
             </Box>
           </Toolbar>

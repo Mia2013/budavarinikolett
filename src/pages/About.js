@@ -31,7 +31,7 @@ export default function About() {
     "Docker",
   ];
   return (
-    <Grid container sx={{ my: 8, mx: "auto" }}>
+    <Grid container sx={{ my: {xs: 3, md: 8}, mx: "auto" }}>
       <Toolbar id="about" />
 
       <Grid item xs={12}>

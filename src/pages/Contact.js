@@ -7,7 +7,7 @@ import PageTitle from "../components/PageTitle";
 
 export default function Contact() {
   return (
-    <Grid container sx={{ my: 8, mx: "auto" }}>
+    <Grid container sx={{  my: {xs: 3, md: 8}, mx: "auto" }}>
       <Toolbar id="contact" />
 
       <Grid item xs={12}>
