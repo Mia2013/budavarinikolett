@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense } from "react";
-import {Toolbar, Box, CssBaseline, Container} from "@mui/material";
+import { Toolbar, Box, CssBaseline, Container } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.scss";
@@ -11,8 +11,6 @@ import FixedBottomNavigation from "./components/Footer";
 import { pages } from "./components/pages";
 
 function App() {
-
-
 
   useEffect(() => {
     AOS.init({

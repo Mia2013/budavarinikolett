@@ -1,11 +1,11 @@
+import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
-
 import { yellow } from "@mui/material/colors";
 
 export default function Home() {
   return (
-    <Grid container sx={{  my: {xs: 3, md: 10, xl: 11} }}>
-    
+    <Grid container sx={{ my: { xs: 10, xl: 11 } }}>
+
       <Grid
         item
         container
@@ -60,6 +60,7 @@ export default function Home() {
             Nikolett
           </Typography>
         </Grid>
+
         <Grid
           item
           xs={12}
@@ -67,11 +68,10 @@ export default function Home() {
             my: { xs: 3, md: 0 },
             display: "flex",
             justifyContent: { xs: "center", md: "flex-start" },
-
             alignItems: "flex-start",
+
           }}
         >
-          {" "}
           <Typography
             variant="h2"
             sx={{
@@ -87,11 +87,10 @@ export default function Home() {
       <Grid item xs={12} md={6}>
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "none", md: "flex" },
             justifyContent: { xs: "center", md: "flex-end" },
-            borderBottom: {xs: "3px solid #ff4081", md: "none"},
-            width: {xs: "80%", md: "100%"},
-            mx: "auto"
+            width: { xs: "80%", md: "100%" },
+            mx: "auto",
           }}
         >
           <Typography
@@ -99,7 +98,7 @@ export default function Home() {
             sx={{
               width: { xs: "30%", md: "70%" },
               filter: "drop-shadow(10px 0px 8px rgba(0,0,0,.415))",
-         
+
             }}
             src={`${process.env.PUBLIC_URL}/me.png`}
           ></Typography>

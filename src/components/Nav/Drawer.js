@@ -45,7 +45,7 @@ function DrawerAppBar(props) {
             <ListItemButton>
               <Button
                 sx={{
-                  my: 1,
+                  my: 2,
                   mx: "auto",
                   color: "black",
                   display: "block",

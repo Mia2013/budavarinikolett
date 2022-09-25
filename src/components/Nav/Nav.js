@@ -72,27 +72,6 @@ const ResponsiveAppBar = ({ pages }) => {
                 mobileOpen={mobileOpen}
               />
             </Box>
-            {/* <Typography
-              className="logo"
-              component="a"
-              href="/"
-              sx={{
-                display: { xs: "flex", sm: "none" },
-                flexGrow: 1,
-                flexDirection: { xs: "column", sm: "none" },
-                my: 1,
-                alignItems: "center",
-              }}
-            >
-              <Typography
-                component="img"
-                className="logo"
-                sx={{
-                  width: "30%",
-                }}
-                src={`${process.env.PUBLIC_URL}/logo.png`}
-              ></Typography>
-            </Typography> */}
 
             <Box
               sx={{
@@ -102,7 +81,6 @@ const ResponsiveAppBar = ({ pages }) => {
             >
               {pages.map((page) => (
                 <Link
-                  activeClass="active"
                   to={page.to}
                   spy={true}
                   smooth={true}
@@ -111,7 +89,6 @@ const ResponsiveAppBar = ({ pages }) => {
                 >
                   <Button
                     key={page.name}
-                    onClick={handleDrawerToggle}
                     sx={{
                       m: 1,
                       color: "black",
