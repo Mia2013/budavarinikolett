@@ -11,7 +11,6 @@ import FixedBottomNavigation from "./components/Footer";
 import { pages } from "./components/pages";
 
 function App() {
-
   useEffect(() => {
     AOS.init({
       offset: 120,
@@ -29,9 +28,9 @@ function App() {
       <React.Fragment>
         <CssBaseline />
         <ResponsiveAppBar pages={pages} />
+        <Toolbar id="back-to-top-anchor" />
         <Suspense fallback={<Loading />}>
-          <Toolbar id="back-to-top-anchor" />
-          <Container sx={{ my: 10, width: { lg: "80%" } }}>
+          <Container maxWidth="lg" sx={{ mb: 5 }}>
             {pages.map((item) => (
               <Box key={item.name}>{item.component} </Box>
             ))}

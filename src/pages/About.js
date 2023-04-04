@@ -5,7 +5,6 @@ import {
   ListItemIcon,
   ListItemText,
   Grid,
-  Toolbar,
 } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { lightGreen } from "@mui/material/colors";
@@ -25,16 +24,19 @@ export default function About() {
     "GitHub",
     "JEST",
     "JIRA",
-    "firebase",
+    "Firebase",
     "Mongo DB",
     "Express.js",
     "Node.js",
     "Docker",
+    "Typescript",
+    "Mocha",
+    "Tailwind CSS",
+    "Webdriver IO"
+    
   ];
   return (
-    <Grid container sx={{ my: {xs: 3, md: 8}, mx: "auto" }}>
-      <Toolbar id="about" />
-
+    <Grid container sx={{ my: {xs: 3, md: 8}, mx: "auto" }} id="about">
       <Grid item xs={12}>
         <PageTitle title="About" />
       </Grid>

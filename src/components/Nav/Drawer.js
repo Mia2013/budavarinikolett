@@ -59,7 +59,7 @@ function DrawerAppBar(props) {
                   to={page.to}
                   spy={true}
                   smooth={true}
-                  offset={-50}
+                  offset={-60}
                   duration={500}
                 >
                   {page.name}

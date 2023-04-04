@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box, Toolbar } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
@@ -8,9 +8,7 @@ import PageTitle from "../components/PageTitle";
 
 export default function Contact() {
   return (
-    <Grid container sx={{  my: {xs: 3, md: 8}, mx: "auto" }}>
-      <Toolbar id="contact" />
-
+    <Grid container sx={{ my: { xs: 3, md: 8 }, mx: "auto" }} id="contact">
       <Grid item xs={12}>
         <PageTitle title="Contact" />
       </Grid>

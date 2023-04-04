@@ -1,40 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --font-family-Playfair: 'Playfair Display', serif;  
+  --font-family-Playfair: "Playfair Display", serif;
   --color: #ff4081;
 }
 
-.logo{
-font-family: var(--font-family-Playfair);
+.logo {
+  font-family: var(--font-family-Playfair);
 }
 
-.web-developer-title > span{
+.web-developer-title > span {
   color: var(--color);
-
 }
 
-.title{
- 
+.title {
   background-image: url(../public/titleBackground.png);
-  background-repeat:no-repeat;
-  background-position: center ;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
   background-size: 160px 80px;
 }
 
-// .logo{
- 
-//   background-image: url(../public/titleBackground.png);
-//   background-repeat:no-repeat;
-//   background-position: center ;
-//   background-size: 60px 40px;
-// }
-
-.footer-linkedin > span{
+.footer-linkedin > span {
   background-color: black;
   padding: 2px 7px;
   border-radius: 3px;
-  color: #ffc107
-
+  color: #ffc107;
 }
+
+  .App {
+    max-width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  .active {
+    border-bottom: var(--color) solid 2px;
+  }
+  
+
 

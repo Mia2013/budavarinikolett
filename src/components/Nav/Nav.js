@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Box,
@@ -15,9 +15,14 @@ import DrawerAppBar from "./Drawer";
 
 const ResponsiveAppBar = ({ pages }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [activeSection, setActiveSection] = useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleSetActiveSection = (sectionId) => {
+    setActiveSection(sectionId);
   };
 
   return (
@@ -84,18 +89,22 @@ const ResponsiveAppBar = ({ pages }) => {
                   to={page.to}
                   spy={true}
                   smooth={true}
-                  offset={-50}
+                  offset={-60}
                   duration={500}
+                  key={page.name}
+                  onSetActive={handleSetActiveSection}
+
                 >
                   <Button
-                    key={page.name}
                     sx={{
-                      m: 1,
+                      px: 2,
                       color: "black",
                       display: "block",
                       fontFamily: "Playfair Display SC",
                       fontSize: "1.1rem",
                     }}
+                    className={page.to === `#${activeSection}` ? "active" : ""}
+
                   >
                     {page.name}
                   </Button>
